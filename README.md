@@ -1,29 +1,42 @@
 # esbuild React Typescript Template
+esbuild を使用した react アプリ
 
-> This is a Typecript template for [esbuild create react app](https://github.com/awran5/esbuild-create-react-app) project.
+https://esbuild.github.io/
 
-## What is inside?
+## setup
+```sh
+npx esbuild-create-react-app esbuild-react
+```
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [esbuild](https://esbuild.github.io/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
-- [lint-staged](https://github.com/okonet/lint-staged)
-- [live-server](https://github.com/tapio/live-server)
+## 立ち上げ
+```sh 
+$ npm run start
 
-## Update (01-11-2022)
+> esbuild-react@1.0.0 start
+> ts-node builder.ts --watch
 
-- add: css module support [esbuild-css-modules-plugin](https://www.npmjs.com/package/esbuild-css-modules-plugin)
-- add: sass/scss [esbuild-sass-plugin](https://www.npmjs.com/package/esbuild-sass-plugin)
-- add: [PostCSS](https://github.com/postcss/postcss)
-- add: [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
-- add: [autoprefixer](https://github.com/postcss/autoprefixer)
-- build: update React 18
-- build: update dependencies
-- refactor: rename `dist` folder to `build`
-- refactor: switch to npm instead of yarn
+Serving "build" at http://127.0.0.1:8181
+Ready for changes
+^C
+npm run start  5.15s user 0.74s system 88% cpu 6.651 total
+```
 
-### License
 
-MIT © [awran5](https://github.com/awran5/)
+## ビルド
+```sh
+$ npm run build
+
+> esbuild-react@1.0.0 build
+> ts-node builder.ts
+
+⚡ [esbuild] Building..
+npm run build  5.43s user 0.81s system 134% cpu 4.626 total
+```
+
+
+## 所感
+速度的に、`create-react-app`の React + webpack環境とあまり変わらない。（ファイルが増えるとこっちが早くなるだろう）
+
+ファイル更新時、画面リロード入る
+
+ネット情報もそんなにない
